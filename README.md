@@ -10,13 +10,13 @@ How to use
 
 * Execute `g2p.sh`:
 ```
-./run.sh words.egs lexicon.txt
+./g2p.sh words.egs lexicon.txt
 ```
 The *lexicon.txt* will be generated.
 
 * You must run `g2p.sh` with an extra parameter when the *words list* file has too many lines (e.g. more than 10 million lines). 
 ```
-./run.sh words.egs lexicon.txt 3
+./g2p.sh words.egs lexicon.txt 3
 ```
 It will split the *words list* into smaller files avoiding espeak seg faults.
 
