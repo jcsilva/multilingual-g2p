@@ -13,6 +13,10 @@ number-of-splits       If input words is too big (e.g. more than 10 million word
 WORDSLIST="$1"
 LEXICON="$2"
 SPLITS=1
+LANGUAGE=pt #by default we will use it for brazilian portuguese. 
+            #It may be used for other languages. 
+            #Just check espeak supported languages 
+            #(http://espeak.sourceforge.net/languages.html).
 
 if [ -z "$WORDSLIST" ] || [ -z "$LEXICON" ] ; then
   echo "$help_message" >&2
@@ -33,7 +37,7 @@ python createSSML.py $SPLITS $WORDSLIST
 # the results in the words-espeak file.
 for idx in `seq $SPLITS`
 do
-  espeak -f out_$(($idx-1)).ssml -m -v pt -q -x --ipa=3 >> words-espeak
+  espeak -f out_$(($idx-1)).ssml -m -v $LANGUAGE -q -x --ipa=3 >> words-espeak
 done
 
 # generates the lexicon file.
