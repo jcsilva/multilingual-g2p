@@ -21,4 +21,7 @@ The *lexicon.txt* will be generated.
 It will split the *words list* into smaller files avoiding espeak seg faults.
 
 
+Languages
+---------
 
+This G2P may be used in several languages. By defautl, it is configured to Brazilian Portuguese. If you want to use for other languages, please change the value of LANGUAGE variable in g2p.sh.
