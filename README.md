@@ -1,4 +1,4 @@
-# Grapheme to Phoneme
+# Multilingual Grapheme to Phoneme
 G2P based on [espeak](http://espeak.sourceforge.net/).
 
 How to use
