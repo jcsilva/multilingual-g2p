@@ -71,8 +71,11 @@ do
   espeak -f out_$(($idx-1)).ssml -m -v $LANGUAGE -q -x --ipa=3 >> words-espeak
 done
 
+#remove blank lines and unwanted symbols
+sed -i -e '/^$/d' -e 's:_: :g' -e 's/ː//g' -e 's/ˈ//g' -e 's/ˌ//g' words-espeak
+
 # generates the lexicon file.
-python espeak2lexicon.py $WORDSLIST words-espeak > $OUTFILE
+paste $WORDSLIST words-espeak > $OUTFILE
 
 # remove intermediate files.
 rm words-espeak out_*
