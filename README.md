@@ -4,8 +4,7 @@ Multilingual G2P based on [espeak](http://espeak.sourceforge.net/).
 Languages
 ---------
 
-This G2P may be used in several languages. By defautl, it is configured for Brazilian Portuguese. If you want to use it with other languages, please change the value of LANGUAGE variable in g2p.sh.
-
+This G2P may be used in several languages. By defautl, it is configured for Brazilian Portuguese. 
 
 How to use
 ----------
@@ -16,16 +15,34 @@ How to use
 
 * Execute `g2p.sh`:
 ```
-./g2p.sh words.egs lexicon.txt
+./g2p.sh -w words.egs 
 ```
-The *lexicon.txt* will be generated.
+The lexicon will be thrown in /dev/stdout.
 
 * You must run `g2p.sh` with an extra parameter when the *words list* file has too many lines (e.g. more than 10 million lines). 
 ```
-./g2p.sh words.egs lexicon.txt 3
+./g2p.sh -w words.egs -s 3
 ```
 It will split the *words list* into smaller files avoiding espeak seg faults.
 
+* You may choose a different language simply setting the parameter "l". For example, the following command line will generate a French lexicon.
+```
+./g2p.sh -w words.egs -l fr
+```
+
+The following languages are valid:
+```
+af (Afrikaans), bs (Bosnian), ca (Catalan), cs (Czech),
+da (Danish), de (German), el (Greek), en (Default English),
+en-us (American English), en-sc (Scottich English),
+en-n (Northern British English), en-rp (Received Pronunciation British English),
+en-wm (West Midlands British English), eo (Esperanto), es (Spanish),
+es-la (Spanish - Latin America), fi (Finnish), fr (French), hr (Croatian),
+hu (Hungarian), it (Italian), kn (Kannada), ku (Kurdish), lv (Latvian),
+nl (Dutch), pl (Polish), pt (Portuguese (Brazil)), pt-pt (Portuguese (European)),
+ro (Romanian), sk (Slovak), sr (Serbian), sv (Swedish), sw (Swahihi),
+ta (Tamil), tr (Turkish), zh (Mandarin Chinese)
+```
 
 Create a Brazilian Portuguese list of words
 -------------------------------------------
