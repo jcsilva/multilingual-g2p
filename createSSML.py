@@ -20,7 +20,7 @@ try:
   with open(words_list, 'r') as inp_file:
     for n in range(num_splits):
       with open('out_'+str(n)+'.ssml', 'w') as out_file:
-        out_file.write('<speak version="1.0" xml:lang="hu">\n')
+        out_file.write('<speak version="1.0">\n')
         out_file.write('<audio/>\n')
         line_counter = 0
         while line_counter < max_lines_per_file:
