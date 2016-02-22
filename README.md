@@ -1,5 +1,5 @@
 # Multilingual Grapheme to Phoneme
-Multilingual G2P based on [espeak](http://espeak.sourceforge.net/).
+Multilingual G2P based on [espeak](http://espeak.sourceforge.net/). Based on [these](http://spirit.blau.in/simon/tag/portuguese/) ideas.
 
 Languages
 ---------
@@ -46,8 +46,6 @@ ta (Tamil), tr (Turkish), zh (Mandarin Chinese)
 
 Create a Brazilian Portuguese list of words
 -------------------------------------------
-
-All the following steps were based on this [recipe](http://spirit.blau.in/simon/tag/portuguese/).
 
 1. [Get spelling dictionary](http://extensions.services.openoffice.org/en/project/Vero), the license is LGPL version 2.1.
 
