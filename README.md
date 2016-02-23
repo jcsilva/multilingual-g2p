@@ -19,12 +19,6 @@ How to use
 ```
 The lexicon will be thrown in /dev/stdout.
 
-* You must run `g2p.sh` with an extra parameter when the *words list* file has too many lines (e.g. more than 10 million lines). 
-```
-./g2p.sh -w words.egs -s 3
-```
-It will split the *words list* into smaller files avoiding espeak seg faults.
-
 * You may choose a different language simply setting the parameter "l". For example, the following command line will generate a French lexicon.
 ```
 ./g2p.sh -w words.egs -l fr
