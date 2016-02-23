@@ -24,7 +24,7 @@ try:
         out_file.write('<audio/>\n')
         line_counter = 0
         while line_counter < max_lines_per_file:
-          out_file.write('<audio>' + inp_file.readline().strip() + '</audio>\n')
+          out_file.write('<audio>' + inp_file.readline().strip().replace("<","").replace(">","") + '</audio>\n')
           line_counter += 1      
         out_file.write('</speak>')
 except Exception,e:
